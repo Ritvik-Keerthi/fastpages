@@ -2,7 +2,7 @@
   
     
         "post0": {
-            "title": "Fastpages Notebook Blog Post",
+            "title": "Python Jupyter Notebook",
             "content": "About . This notebook is a demonstration of some of capabilities of fastpages with notebooks. . With fastpages you can save your jupyter notebooks into the _notebooks folder at the root of your repository, and they will be automatically be converted to Jekyll compliant blog posts! . Images . Local Images . You can reference local images and they will be copied and rendered on your blog automatically. You can include these with the following markdown syntax: . ![](my_icons/fastai_logo.png) . Python Capabilities . Below is the print command that I can run within Jupyter Notebook through Python! . My name is Ritvik and I am a student in AP Computer Science A .",
             "url": "https://ritvik-keerthi.github.io/fastpages/jupyter/2022/08/21/ritvikjupyter.html",
             "relUrl": "/jupyter/2022/08/21/ritvikjupyter.html",
