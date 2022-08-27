@@ -133,6 +133,79 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Data Types
+Primitive: Boolean (boolean) and Numeric {Character (char), Integral {Integer (byte, short, int, long)},  Floating Point {float, double}}</p>
+<p>Non-Primitive: String, Array etc.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-javascript"><pre><span></span><span class="kr">public</span> <span class="kr">class</span> <span class="nx">DefinePrimitives</span> <span class="p">{</span>
+    <span class="kr">public</span> <span class="kr">static</span> <span class="k">void</span> <span class="nx">main</span><span class="p">(</span><span class="nb">String</span><span class="p">[]</span> <span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kr">int</span> <span class="nx">anInt</span> <span class="o">=</span> <span class="mf">100</span><span class="p">;</span>
+      <span class="kr">double</span> <span class="nx">aDouble</span> <span class="o">=</span> <span class="mf">89.9</span><span class="p">;</span>
+      <span class="kr">boolean</span> <span class="nx">aBoolean</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+      <span class="nx">string</span> <span class="nx">aString</span> <span class="o">=</span> <span class="s2">"Clippers are winning the NBA Championship"</span>
+
+      <span class="c1">// not primitives but essential</span>
+      <span class="nb">String</span> <span class="nx">aString</span> <span class="o">=</span> <span class="s2">"Hello, World!"</span><span class="p">;</span>   <span class="c1">// wrapper class shortcut assignment</span>
+      <span class="nb">String</span> <span class="nx">aStringFormal</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">String</span><span class="p">(</span><span class="s2">"Greetings, World!"</span><span class="p">);</span>
+  
+      <span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span><span class="s2">"anInt: "</span> <span class="o">+</span> <span class="nx">anInt</span><span class="p">);</span>
+      <span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span><span class="s2">"aDouble: "</span> <span class="o">+</span> <span class="nx">aDouble</span><span class="p">);</span>
+      <span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span><span class="s2">"aBoolean: "</span> <span class="o">+</span> <span class="nx">aBoolean</span><span class="p">);</span>
+      <span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span><span class="s2">"aString: "</span> <span class="o">+</span> <span class="nx">aString</span><span class="p">);</span>
+      <span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span><span class="s2">"aStringFormal: "</span> <span class="o">+</span> <span class="nx">aStringFormal</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="nx">DefinePrimitives</span><span class="p">.</span><span class="nx">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+evalmachine.&lt;anonymous&gt;:1
+public class DefinePrimitives {
+       ^^^^^
+
+SyntaxError: Unexpected token class
+    at createScript (vm.js:56:10)
+    at Object.runInThisContext (vm.js:97:10)
+    at run ([eval]:1020:15)
+    at onRunRequest ([eval]:864:18)
+    at onMessage ([eval]:828:13)
+    at emitTwo (events.js:106:13)
+    at process.emit (events.js:191:7)
+    at process.nextTick (internal/child_process.js:758:12)
+    at _combinedTickCallback (internal/process/next_tick.js:73:7)
+    at process._tickCallback (internal/process/next_tick.js:104:9)</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
