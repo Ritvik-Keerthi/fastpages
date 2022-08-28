@@ -156,7 +156,7 @@ Primitive: Boolean (boolean) and Numeric {Character (char), Integral {Integer (b
     <span class="kt">int</span> <span class="n">anInt</span> <span class="o">=</span> <span class="mi">828329297</span><span class="p">;</span>
     <span class="kt">double</span> <span class="n">aDouble</span> <span class="o">=</span> <span class="mf">90.8</span><span class="p">;</span>
     <span class="kt">boolean</span> <span class="n">aBoolean</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
-    <span class="n">string</span> <span class="n">aString</span> <span class="o">=</span> <span class="s">"Clippers are winning the NBA Championship"</span><span class="p">;</span>
+    <span class="n">String</span> <span class="n">aString</span> <span class="o">=</span> <span class="s">"Clippers are winning the NBA Championship"</span><span class="p">;</span>
 
 
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"anInt: "</span> <span class="o">+</span> <span class="n">anInt</span><span class="p">);</span>
@@ -180,9 +180,24 @@ Primitive: Boolean (boolean) and Numeric {Character (char), Integral {Integer (b
 
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    string aString = "Clippers are winning the NBA Championship"</span>
-<span class="ansi-red-intense-fg ansi-bold">';' expected</span>
-</pre>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">// Hack 1 --&gt; Demonstrating Key Learnings of Primitives Wk1</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">public class DefinePrimitives {</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">  public static void main(String[] args) {</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    int anInt = 828329297;</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    double aDouble = 90.8;</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    boolean aBoolean = false;</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    string aString = "Clippers are winning the NBA Championship";</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    System.out.println("anInt: " + anInt);</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    System.out.println("aDouble: " + aDouble);</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    System.out.println("aBoolean: " + aBoolean);</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    System.out.println("aString: " + aString);</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">  }</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">}</span>
+<span class="ansi-red-intense-fg ansi-bold">Unresolved dependencies:</span>
+<span class="ansi-red-intense-fg ansi-bold">   - class string</span></pre>
 </div>
 </div>
 
