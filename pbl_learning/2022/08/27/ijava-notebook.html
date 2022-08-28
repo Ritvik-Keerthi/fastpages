@@ -150,25 +150,23 @@ Primitive: Boolean (boolean) and Numeric {Character (char), Integral {Integer (b
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-javascript"><pre><span></span><span class="kr">public</span> <span class="kr">class</span> <span class="nx">DefinePrimitives</span> <span class="p">{</span>
-    <span class="kr">public</span> <span class="kr">static</span> <span class="k">void</span> <span class="nx">main</span><span class="p">(</span><span class="nb">String</span><span class="p">[]</span> <span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
-      <span class="kr">int</span> <span class="nx">anInt</span> <span class="o">=</span> <span class="mf">100</span><span class="p">;</span>
-      <span class="kr">double</span> <span class="nx">aDouble</span> <span class="o">=</span> <span class="mf">89.9</span><span class="p">;</span>
-      <span class="kr">boolean</span> <span class="nx">aBoolean</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-      <span class="nx">string</span> <span class="nx">aString</span> <span class="o">=</span> <span class="s2">"Clippers are winning the NBA Championship"</span>
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// Hack 1 --&gt; Demonstrating Key Learnings of Primitives Wk1</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">DefinePrimitives</span> <span class="p">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">anInt</span> <span class="o">=</span> <span class="mi">828329297</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">aDouble</span> <span class="o">=</span> <span class="mf">90.8</span><span class="p">;</span>
+    <span class="kt">boolean</span> <span class="n">aBoolean</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">aString</span> <span class="o">=</span> <span class="s">"Clippers are winning the NBA Championship"</span><span class="p">;</span>
 
-      <span class="c1">// not primitives but essential</span>
-      <span class="nb">String</span> <span class="nx">aString</span> <span class="o">=</span> <span class="s2">"Hello, World!"</span><span class="p">;</span>   <span class="c1">// wrapper class shortcut assignment</span>
-      <span class="nb">String</span> <span class="nx">aStringFormal</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">String</span><span class="p">(</span><span class="s2">"Greetings, World!"</span><span class="p">);</span>
-  
-      <span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span><span class="s2">"anInt: "</span> <span class="o">+</span> <span class="nx">anInt</span><span class="p">);</span>
-      <span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span><span class="s2">"aDouble: "</span> <span class="o">+</span> <span class="nx">aDouble</span><span class="p">);</span>
-      <span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span><span class="s2">"aBoolean: "</span> <span class="o">+</span> <span class="nx">aBoolean</span><span class="p">);</span>
-      <span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span><span class="s2">"aString: "</span> <span class="o">+</span> <span class="nx">aString</span><span class="p">);</span>
-      <span class="nx">System</span><span class="p">.</span><span class="nx">out</span><span class="p">.</span><span class="nx">println</span><span class="p">(</span><span class="s2">"aStringFormal: "</span> <span class="o">+</span> <span class="nx">aStringFormal</span><span class="p">);</span>
-    <span class="p">}</span>
+
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"anInt: "</span> <span class="o">+</span> <span class="n">anInt</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"aDouble: "</span> <span class="o">+</span> <span class="n">aDouble</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"aBoolean: "</span> <span class="o">+</span> <span class="n">aBoolean</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"aString: "</span> <span class="o">+</span> <span class="n">aString</span><span class="p">);</span>
+
   <span class="p">}</span>
-  <span class="nx">DefinePrimitives</span><span class="p">.</span><span class="nx">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="n">DefinePrimitives</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -182,21 +180,9 @@ Primitive: Boolean (boolean) and Numeric {Character (char), Integral {Integer (b
 
 <div class="output_subarea output_text output_error">
 <pre>
-evalmachine.&lt;anonymous&gt;:1
-public class DefinePrimitives {
-       ^^^^^
-
-SyntaxError: Unexpected token class
-    at createScript (vm.js:56:10)
-    at Object.runInThisContext (vm.js:97:10)
-    at run ([eval]:1020:15)
-    at onRunRequest ([eval]:864:18)
-    at onMessage ([eval]:828:13)
-    at emitTwo (events.js:106:13)
-    at process.emit (events.js:191:7)
-    at process.nextTick (internal/child_process.js:758:12)
-    at _combinedTickCallback (internal/process/next_tick.js:73:7)
-    at process._tickCallback (internal/process/next_tick.js:104:9)</pre>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    string aString = "Clippers are winning the NBA Championship"</span>
+<span class="ansi-red-intense-fg ansi-bold">';' expected</span>
+</pre>
 </div>
 </div>
 
