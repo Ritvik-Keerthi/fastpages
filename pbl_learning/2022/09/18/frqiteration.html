@@ -82,7 +82,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      5 min read
     
 </span></p>
 
@@ -138,29 +138,79 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
-<div class="cell border-box-sizing text_cell rendered">
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
 <div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>public class Textbook extends Book {
-    private int edition;
-    public Textbook(String bookTitle, double bookPrice, int bookEdition) {
-        super(bookTitle, bookPrice);
-        edition = bookEdition;
-    }
-    public int getEdition() {
-        returns edition;
-    }
-    public String getBookInfo(){
-        return super.getBookInfo + "-" + edition;
-    }
-    public boolean canSubstituteFor(Textbook book2){
-        return this.getTitle().equals(book2.getTitle()) &amp;&amp; this.getEdition() &gt;= book2.getEdition();
-    }
-}</p>
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Textbook</span> <span class="kd">extends</span> <span class="n">Book</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">edition</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="nf">Textbook</span><span class="p">(</span><span class="n">String</span> <span class="n">bookTitle</span><span class="p">,</span> <span class="kt">double</span> <span class="n">bookPrice</span><span class="p">,</span> <span class="kt">int</span> <span class="n">bookEdition</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">bookTitle</span><span class="p">,</span> <span class="n">bookPrice</span><span class="p">);</span>
+        <span class="n">edition</span> <span class="o">=</span> <span class="n">bookEdition</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getEdition</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">returns</span> <span class="n">edition</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getBookInfo</span><span class="p">(){</span>
+        <span class="k">return</span> <span class="kd">super</span><span class="p">.</span><span class="na">getBookInfo</span> <span class="o">+</span> <span class="s">"-"</span> <span class="o">+</span> <span class="n">edition</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">canSubstituteFor</span><span class="p">(</span><span class="n">Textbook</span> <span class="n">book2</span><span class="p">){</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">getTitle</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="n">book2</span><span class="p">.</span><span class="na">getTitle</span><span class="p">())</span> <span class="o">&amp;&amp;</span> <span class="k">this</span><span class="p">.</span><span class="na">getEdition</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="n">book2</span><span class="p">.</span><span class="na">getEdition</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">public class Textbook extends </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">Book</span><span class="ansi-black-intense-fg ansi-bold"> {</span>
+<span class="ansi-red-intense-fg ansi-bold">cannot find symbol</span>
+<span class="ansi-red-intense-fg ansi-bold">  symbol:   class Book</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">returns</span><span class="ansi-black-intense-fg ansi-bold"> edition;</span>
+<span class="ansi-red-intense-fg ansi-bold">cannot find symbol</span>
+<span class="ansi-red-intense-fg ansi-bold">  symbol:   class returns</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        return </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">super</span><span class="ansi-black-intense-fg ansi-bold">.getBookInfo + "-" + edition;</span>
+<span class="ansi-red-intense-fg ansi-bold">non-static variable super cannot be referenced from a static context</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        return </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">super.getBookInfo</span><span class="ansi-black-intense-fg ansi-bold"> + "-" + edition;</span>
+<span class="ansi-red-intense-fg ansi-bold">cannot find symbol</span>
+<span class="ansi-red-intense-fg ansi-bold">  symbol: variable getBookInfo</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        return </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">this.getTitle</span><span class="ansi-black-intense-fg ansi-bold">().equals(book2.getTitle()) &amp;&amp; this.getEdition() &gt;= book2.getEdition();</span>
+<span class="ansi-red-intense-fg ansi-bold">cannot find symbol</span>
+<span class="ansi-red-intense-fg ansi-bold">  symbol: method getTitle()</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        return this.getTitle().equals(</span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">book2.getTitle</span><span class="ansi-black-intense-fg ansi-bold">()) &amp;&amp; this.getEdition() &gt;= book2.getEdition();</span>
+<span class="ansi-red-intense-fg ansi-bold">cannot find symbol</span>
+<span class="ansi-red-intense-fg ansi-bold">  symbol:   method getTitle()</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    public int getEdition() </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">{</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">        returns edition;</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">    }</span>
+<span class="ansi-red-intense-fg ansi-bold">missing return statement</span>
+</pre>
+</div>
+</div>
 
 </div>
 </div>
+
 </div>
+    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -295,6 +345,104 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+Monkey Jumpers Poem in Java Loopy
+5 little monkeys jumping on the bed...
+ʕง ͠° ͟ل͜ ͡°)ʔ  
+  \_⏄_/   
+  --0--    
+  ⎛   ⎞    
+
+ʕง ͠° ͟ل͜ ͡°)ʔ  
+  \_⏄_/   
+  --0--    
+  ⎛   ⎞    
+
+ ʕ(▀ ⍡ ▀)ʔ 
+  \_⎐_/  
+  &lt;-2-&gt;   
+  〈  〉  
+
+ʕ ͡° ͜ʖ ° ͡ʔ 
+  \_⍾_/   
+  ==3==   
+  _/ \_   
+
+  (◕‿◕✿)  
+  \_⍾_/  
+  ==4==   
+  _/ \_  
+
+4 little monkeys jumping on the bed...
+ʕง ͠° ͟ل͜ ͡°)ʔ  
+  \_⏄_/   
+  --0--    
+  ⎛   ⎞    
+
+ʕง ͠° ͟ل͜ ͡°)ʔ  
+  \_⏄_/   
+  --0--    
+  ⎛   ⎞    
+
+ ʕ(▀ ⍡ ▀)ʔ 
+  \_⎐_/  
+  &lt;-2-&gt;   
+  〈  〉  
+
+ʕ ͡° ͜ʖ ° ͡ʔ 
+  \_⍾_/   
+  ==3==   
+  _/ \_   
+
+3 little monkeys jumping on the bed...
+ʕง ͠° ͟ل͜ ͡°)ʔ  
+  \_⏄_/   
+  --0--    
+  ⎛   ⎞    
+
+ʕง ͠° ͟ل͜ ͡°)ʔ  
+  \_⏄_/   
+  --0--    
+  ⎛   ⎞    
+
+ ʕ(▀ ⍡ ▀)ʔ 
+  \_⎐_/  
+  &lt;-2-&gt;   
+  〈  〉  
+
+2 little monkeys jumping on the bed...
+ʕง ͠° ͟ل͜ ͡°)ʔ  
+  \_⏄_/   
+  --0--    
+  ⎛   ⎞    
+
+ʕง ͠° ͟ل͜ ͡°)ʔ  
+  \_⏄_/   
+  --0--    
+  ⎛   ⎞    
+
+1 little monkeys jumping on the bed...
+ʕง ͠° ͟ل͜ ͡°)ʔ  
+  \_⏄_/   
+  --0--    
+  ⎛   ⎞    
+
+No more monkeys jumping on the bed
+0000000000000000000000000000000000
+             THE END              
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
