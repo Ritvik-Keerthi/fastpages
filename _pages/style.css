@@ -1,0 +1,90 @@
+html, body {
+    width: 100%;
+    height: 100%;
+  }
+  
+  body {
+    background-image: url("https://sportshub.cbsistatic.com/i/r/2021/04/15/5c307906-24c0-47f9-b788-e4d62a316344/thumbnail/1200x675/bae46a95c93a67797c4e12a90e0b0439/new-team.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .container-0 {
+    color: white;
+    text-align: center;
+    position: relative;
+    top: -20px;
+    width: fit-content;
+    height: fit-content;
+    right: -400px;
+    background-color: black
+  }
+  
+  .container {
+    text-align: center;
+    position: relative;
+    border: 5px blue;
+    top: 250px;
+  }
+  
+  .container-2 {
+    text-align: center;
+    position: relative;
+    border: 5px blue;
+    top: 300px;
+  }
+  
+  
+  .container-3 {
+    text-align: left;
+    color: black;
+    position: relative; 
+    top: -140px;
+    background-color: green;
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+  }
+  
+  .container-4 {
+    text-align: left;
+    color: black;
+    position: relative;
+    top: -140px;
+    right: -932px;
+    background-color: green;
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+    background-color: lightblue;
+  }
+  
+  .container-5 {
+    text-align: left;
+    color: black;
+    position: relative;
+    top: -140px;
+    right: -375px;
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+    background-color: pink;
+  }
+  .button {
+    background-color: #4CAF50;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  .button-nfl {
+    background-color: lightblue;
+  }
+  
