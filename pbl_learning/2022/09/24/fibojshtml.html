@@ -82,7 +82,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      7 min read
+      8 min read
     
 </span></p>
 
@@ -379,6 +379,93 @@ fibonacci Sequence 20 = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377,
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Log</span> <span class="p">{</span>
+  <span class="n">function</span> <span class="nf">logItType</span><span class="p">(</span><span class="n">output</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">console</span><span class="p">.</span><span class="na">log</span><span class="p">(</span><span class="n">typeof</span> <span class="n">output</span><span class="p">,</span> <span class="s">";"</span><span class="p">,</span> <span class="n">output</span><span class="p">);</span>
+  <span class="p">}</span>
+    <span class="n">console</span><span class="p">.</span><span class="na">log</span><span class="p">(</span><span class="s">"Looking at dynamic nature of types in JavaScript"</span><span class="p">)</span>
+    <span class="n">logItType</span><span class="p">(</span><span class="s">"hello"</span><span class="p">);</span> <span class="c1">// String</span>
+    <span class="n">logItType</span><span class="p">(</span><span class="mi">2020</span><span class="p">);</span>    <span class="c1">// Number</span>
+    <span class="n">logItType</span><span class="p">(</span><span class="o">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="o">]</span><span class="p">);</span> 
+    <span class="c1">// define a function to hold data for a Person</span>
+  <span class="n">function</span> <span class="nf">Person</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">ghID</span><span class="p">,</span> <span class="n">classOf</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="na">ghID</span> <span class="o">=</span> <span class="n">ghID</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="na">classOf</span> <span class="o">=</span> <span class="n">classOf</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="na">role</span> <span class="o">=</span> <span class="s">""</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="c1">// define a setter for role in Person data</span>
+  <span class="n">Person</span><span class="p">.</span><span class="na">prototype</span><span class="p">.</span><span class="na">setRole</span> <span class="o">=</span> <span class="n">function</span><span class="p">(</span><span class="n">role</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="na">role</span> <span class="o">=</span> <span class="n">role</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="c1">// define a JSON conversion "method" associated with Person</span>
+  <span class="n">Person</span><span class="p">.</span><span class="na">prototype</span><span class="p">.</span><span class="na">toJSON</span> <span class="o">=</span> <span class="n">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="n">obj</span> <span class="o">=</span> <span class="p">{</span><span class="n">name</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="p">,</span> <span class="n">ghID</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="na">ghID</span><span class="p">,</span> <span class="n">classOf</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="na">classOf</span><span class="p">,</span> <span class="n">role</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="na">role</span><span class="p">};</span>
+    <span class="kd">const</span> <span class="n">json</span> <span class="o">=</span> <span class="n">JSON</span><span class="p">.</span><span class="na">stringify</span><span class="p">(</span><span class="n">obj</span><span class="p">);</span>  <span class="c1">// json/string is useful when passing data on internet</span>
+    <span class="k">return</span> <span class="n">json</span><span class="p">;</span>
+  <span class="p">}</span>
+
+  <span class="c1">// make a new Person and assign to variable teacher</span>
+  <span class="kd">var</span> <span class="n">teacher</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Person</span><span class="p">(</span><span class="s">"Mr M"</span><span class="p">,</span> <span class="s">"jm1021"</span><span class="p">,</span> <span class="mi">1977</span><span class="p">);</span>  <span class="c1">// object type is easy to work with in JavaScript</span>
+  <span class="n">logItType</span><span class="p">(</span><span class="n">teacher</span><span class="p">);</span>  <span class="c1">// before role</span>
+  <span class="n">logItType</span><span class="p">(</span><span class="n">teacher</span><span class="p">.</span><span class="na">toJSON</span><span class="p">());</span>  <span class="c1">// ok to do this even though role is not yet defined</span>
+
+  <span class="c1">// output of Object and JSON/string associated with Teacher</span>
+  <span class="n">teacher</span><span class="p">.</span><span class="na">setRole</span><span class="p">(</span><span class="s">"Teacher"</span><span class="p">);</span>   <span class="c1">// set the role</span>
+  <span class="n">logItType</span><span class="p">(</span><span class="n">teacher</span><span class="p">);</span> 
+  <span class="n">logItType</span><span class="p">(</span><span class="n">teacher</span><span class="p">.</span><span class="na">toJSON</span><span class="p">());</span>
+
+  <span class="c1">// define a student Array of Person(s)</span>
+  <span class="kd">var</span> <span class="n">students</span> <span class="o">=</span> <span class="o">[</span> 
+    <span class="k">new</span> <span class="n">Person</span><span class="p">(</span><span class="s">"Anthony"</span><span class="p">,</span> <span class="s">"tonyhieu"</span><span class="p">,</span> <span class="mi">2022</span><span class="p">),</span>
+    <span class="k">new</span> <span class="n">Person</span><span class="p">(</span><span class="s">"Bria"</span><span class="p">,</span> <span class="s">"B-G101"</span><span class="p">,</span> <span class="mi">2023</span><span class="p">),</span>
+    <span class="k">new</span> <span class="n">Person</span><span class="p">(</span><span class="s">"Allie"</span><span class="p">,</span> <span class="s">"xiaoa0"</span><span class="p">,</span> <span class="mi">2023</span><span class="p">),</span>
+    <span class="k">new</span> <span class="n">Person</span><span class="p">(</span><span class="s">"Tigran"</span><span class="p">,</span> <span class="s">"Tigran7"</span><span class="p">,</span> <span class="mi">2023</span><span class="p">),</span>
+    <span class="k">new</span> <span class="n">Person</span><span class="p">(</span><span class="s">"Rebecca"</span><span class="p">,</span> <span class="s">"Rebecca-123"</span><span class="p">,</span> <span class="mi">2023</span><span class="p">)</span>
+  <span class="o">]</span><span class="p">;</span>
+
+  <span class="c1">// define a classroom and build Classroom objects and json</span>
+  <span class="n">function</span> <span class="nf">Classroom</span><span class="p">(</span><span class="n">teacher</span><span class="p">,</span> <span class="n">students</span><span class="p">){</span> <span class="c1">// 1 teacher, many student</span>
+    <span class="c1">// start Classroom with Teacher</span>
+    <span class="n">teacher</span><span class="p">.</span><span class="na">setRole</span><span class="p">(</span><span class="s">"Teacher"</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="na">teacher</span> <span class="o">=</span> <span class="n">teacher</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="na">classroom</span> <span class="o">=</span> <span class="o">[</span><span class="n">teacher</span><span class="o">]</span><span class="p">;</span>
+    <span class="c1">// add each Student to Classroom</span>
+    <span class="k">this</span><span class="p">.</span><span class="na">students</span> <span class="o">=</span> <span class="n">students</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="na">students</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">student</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="n">student</span><span class="p">.</span><span class="na">setRole</span><span class="p">(</span><span class="s">"Student"</span><span class="p">);</span> <span class="k">this</span><span class="p">.</span><span class="na">classroom</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="n">student</span><span class="p">);</span> <span class="p">});</span>
+    <span class="c1">// build json/string format of Classroom</span>
+    <span class="k">this</span><span class="p">.</span><span class="na">json</span> <span class="o">=</span> <span class="o">[]</span><span class="p">;</span>
+    <span class="k">this</span><span class="p">.</span><span class="na">classroom</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">person</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="na">json</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="n">person</span><span class="p">.</span><span class="na">toJSON</span><span class="p">()));</span>
+  <span class="p">}</span>
+
+  <span class="c1">// make a CompSci classroom from formerly defined teacher and students</span>
+  <span class="n">compsci</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Classroom</span><span class="p">(</span><span class="n">teacher</span><span class="p">,</span> <span class="n">students</span><span class="p">);</span>
+
+  <span class="c1">// output of Objects and JSON in CompSci classroom</span>
+  <span class="n">logItType</span><span class="p">(</span><span class="n">compsci</span><span class="p">.</span><span class="na">classroom</span><span class="p">);</span>  <span class="c1">// constructed classroom object</span>
+  <span class="n">logItType</span><span class="p">(</span><span class="n">compsci</span><span class="p">.</span><span class="na">classroom</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">.</span><span class="na">name</span><span class="p">);</span>  <span class="c1">// abstract 1st objects name</span>
+  <span class="n">logItType</span><span class="p">(</span><span class="n">compsci</span><span class="p">.</span><span class="na">json</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>  <span class="c1">// show json conversion of 1st object to string</span>
+  <span class="n">logItType</span><span class="p">(</span><span class="n">JSON</span><span class="p">.</span><span class="na">parse</span><span class="p">(</span><span class="n">compsci</span><span class="p">.</span><span class="na">json</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">));</span>  <span class="c1">// show JSON.parse inverse of JSON.stringify</span>
+<span class="p">}</span>
+<span class="n">Log</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
