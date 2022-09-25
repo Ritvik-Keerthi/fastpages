@@ -171,6 +171,14 @@
   
 
   
+      ,"page7": {
+          "title": "Median",
+          "content": "&lt;!DOCTYPE html&gt; . . NFL Draft Results . Choose one of the buttons to view the first round of the draft class! . View 2020 NFL Draft Results &lt;button class=&quot;button button-nfl&quot;onclick=&quot;call2021()&quot;&gt;View 2021 NFL Draft Results&lt;/button&gt; Random NFL Draft Fact Clear Results . . . .",
+          "url": "https://ritvik-keerthi.github.io/fastpages/ok",
+          "relUrl": "/ok",
+          "date": ""
+      }
+      
   
 
   
@@ -180,7 +188,10 @@
   
 
   
-      ,"page10": {
+  
+
+  
+      ,"page11": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://ritvik-keerthi.github.io/fastpages/robots.txt",
