@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      5 min read
     
 </span></p>
 
@@ -211,6 +211,99 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// Red Scale</span>
+<span class="kn">import</span> <span class="nn">java.io.File</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.io.IOException</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.awt.image.BufferedImage</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">javax.imageio.ImageIO</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Red</span><span class="p">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[]</span><span class="p">)</span><span class="kd">throws</span> <span class="n">IOException</span><span class="p">{</span>
+    <span class="n">BufferedImage</span> <span class="n">img</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+    <span class="c1">//File imageFile = null;</span>
+    <span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="s">"moore"</span><span class="p">;</span>
+    <span class="n">String</span> <span class="n">in</span> <span class="o">=</span> <span class="s">"images/"</span><span class="p">;</span>
+    <span class="n">String</span> <span class="n">out</span> <span class="o">=</span> <span class="s">"images/tmp/"</span><span class="p">;</span>
+    <span class="n">String</span> <span class="n">name2</span> <span class="o">=</span> <span class="s">"redmoore"</span><span class="p">;</span>
+    
+    
+
+
+    <span class="k">try</span><span class="p">{</span>
+      <span class="n">File</span> <span class="n">imageFile</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="p">(</span><span class="n">in</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s">".jpg"</span><span class="p">);</span>
+      <span class="n">img</span> <span class="o">=</span> <span class="n">ImageIO</span><span class="p">.</span><span class="na">read</span><span class="p">(</span><span class="n">imageFile</span><span class="p">);</span>
+    <span class="p">}</span><span class="k">catch</span><span class="p">(</span><span class="n">IOException</span> <span class="n">e</span><span class="p">){</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kt">int</span> <span class="n">width</span> <span class="o">=</span> <span class="n">img</span><span class="p">.</span><span class="na">getWidth</span><span class="p">();</span>
+    <span class="kt">int</span> <span class="n">height</span> <span class="o">=</span> <span class="n">img</span><span class="p">.</span><span class="na">getHeight</span><span class="p">();</span>
+
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">height</span><span class="p">;</span> <span class="n">y</span><span class="o">++</span><span class="p">){</span>
+      <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">width</span><span class="p">;</span> <span class="n">x</span><span class="o">++</span><span class="p">){</span>
+        <span class="kt">int</span> <span class="n">p</span> <span class="o">=</span> <span class="n">img</span><span class="p">.</span><span class="na">getRGB</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+  
+        <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="n">p</span> <span class="o">&gt;&gt;</span> <span class="mi">24</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xff</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">r</span> <span class="o">=</span> <span class="p">(</span><span class="n">p</span> <span class="o">&gt;&gt;</span> <span class="mi">16</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xff</span><span class="p">;</span>
+
+        <span class="n">p</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;&lt;</span> <span class="mi">24</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">r</span> <span class="o">&lt;&lt;</span> <span class="mi">16</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">|</span> <span class="mi">0</span><span class="p">;</span>
+
+        <span class="n">img</span><span class="p">.</span><span class="na">setRGB</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">p</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">//write image</span>
+    <span class="k">try</span><span class="p">{</span>
+      <span class="n">ImageIO</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="s">"gif"</span><span class="p">,</span> <span class="k">new</span> <span class="n">File</span><span class="p">(</span><span class="n">out</span> <span class="o">+</span> <span class="n">name2</span> <span class="o">+</span> <span class="s">".jpg"</span><span class="p">)</span> <span class="p">);</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Success"</span><span class="p">);</span>
+    <span class="p">}</span><span class="k">catch</span><span class="p">(</span><span class="n">IOException</span> <span class="n">e</span><span class="p">){</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span><span class="c1">//main() ends here</span>
+<span class="p">}</span><span class="c1">//class ends here</span>
+
+<span class="n">Red</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>javax.imageio.IIOException: Can't read input file!
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">java.lang.NullPointerException: null</span>
+<span class="ansi-red-intense-fg ansi-bold">	at Red.main(#20:1)</span>
+<span class="ansi-red-intense-fg ansi-bold">	at .(#22:3)</span></pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
     
     
 <div class="cell border-box-sizing code_cell rendered">
