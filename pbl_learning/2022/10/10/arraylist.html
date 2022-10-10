@@ -143,13 +143,46 @@ window.onload = wrap_img;
 <div class=" highlight hl-java"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.ArrayList</span><span class="p">;</span>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
+        <span class="c1">//1st ArrayList</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
+        
         <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">Prometheus</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
         <span class="n">Prometheus</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Dumbbell Curls"</span><span class="p">);</span>
+        <span class="n">Prometheus</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Barbell Curls"</span><span class="p">);</span>
+        <span class="n">Prometheus</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Bench Press"</span><span class="p">);</span>
+        <span class="n">Prometheus</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Squats"</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Prometheus</span><span class="p">);</span>
 
+        <span class="c1">//2nd ArrayList</span>
         <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">Ideas</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
-        <span class="n">Ideas</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Have workout increments of 1 hour for 6 days each week. "</span><span class="p">)</span>
+        <span class="n">Ideas</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">"Have workout increments of 1 hour for 6 days each week."</span><span class="p">);</span>
+
+        <span class="n">Prometheus</span><span class="p">.</span><span class="na">addAll</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">Ideas</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Prometheus</span><span class="p">);</span>
+
+        <span class="c1">//3rd Array List</span>
+        <span class="kt">int</span> <span class="n">Pome</span> <span class="o">=</span> <span class="n">Prometheus</span><span class="p">.</span><span class="na">size</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Pome</span><span class="p">);</span>
+
+        <span class="c1">//4th Array List</span>
+        <span class="kt">int</span> <span class="n">Prom</span> <span class="o">=</span> <span class="n">Prometheus</span><span class="p">.</span><span class="na">hashCode</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Prom</span><span class="p">);</span>
+
+        <span class="c1">//5th Array List</span>
+        <span class="n">Boolean</span> <span class="n">fitness</span> <span class="o">=</span> <span class="n">Prometheus</span><span class="p">.</span><span class="na">contains</span><span class="p">(</span><span class="s">"Dumbbell Curls"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">fitness</span><span class="p">);</span>
+
+        <span class="c1">//6th Array List</span>
+        <span class="kt">int</span> <span class="n">Prome</span> <span class="o">=</span> <span class="n">Prometheus</span><span class="p">.</span><span class="na">indexOf</span><span class="p">(</span><span class="s">"Squats"</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Prome</span><span class="p">);</span>
+
+        <span class="c1">//7th Array List</span>
+        <span class="n">String</span> <span class="n">Prome2</span> <span class="o">=</span> <span class="n">Prometheus</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Prome2</span><span class="p">);</span>
+
+        <span class="c1">//8th Array List</span>
+        <span class="n">Boolean</span> <span class="n">Prome3</span> <span class="o">=</span> <span class="n">Prometheus</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Prome3</span><span class="p">);</span>
 
     <span class="p">}</span>
 
@@ -168,7 +201,14 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[Dumbbell Curls]
+<pre>[Dumbbell Curls, Barbell Curls, Bench Press, Squats]
+[Dumbbell Curls, Barbell Curls, Have workout increments of 1 hour for 6 days each week., Bench Press, Squats]
+5
+-1964587162
+true
+4
+Bench Press
+false
 </pre>
 </div>
 </div>
