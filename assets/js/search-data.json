@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Unit 3 and 5 HW (Unit 3&5)",
-            "content": "// Unit 3 HW . // Unit 5 HW (1a + 3a) . 1a) . public int scoreGuess(String guess){ int result = 0; . for(int it = 0; i &lt; secret.length(); i++){ if(secret.substring(i).indexOf(guess) == 0){ count++; } } return result * guess.length() * guess.length(); . } . 3a) . public void addMembers(String[] names, int gradYear){ for(int i = 0; i &lt; names.length; i++) { MemberInfo temp = new MemberInfo(names[i], gradYear, true); membersLIst.add(Temp); }&gt;) } .",
+            "content": "// Unit 3 HW . // Unit 5 HW (1a + 3a) //1a) public int scoreGuess(String guess){ int result = 0; for(int i = 0; i &lt; secret.length(); i++){ if(secret.substring(i).indexOf(guess) == 0){ count++; } } return result * guess.length() * guess.length(); } //3a) public void addMembers(String[] names, int gradYear){ for(int i = 0; i &lt; names.length; i++) { MemberInfo temp = new MemberInfo(names[i], gradYear, true); membersLIst.add(Temp); ) } .",
             "url": "https://ritvik-keerthi.github.io/fastpages/pbl_learning/2022/10/24/unit3&5hw.html",
             "relUrl": "/pbl_learning/2022/10/24/unit3&5hw.html",
             "date": " • Oct 24, 2022"

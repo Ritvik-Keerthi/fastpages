@@ -150,34 +150,47 @@ window.onload = wrap_img;
 </div>
     
 
-<div class="cell border-box-sizing text_cell rendered">
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
 <div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>// Unit 5 HW (1a + 3a)</p>
-<p>1a)</p>
-<p>public int scoreGuess(String guess){
-    int result = 0;</p>
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// Unit 5 HW (1a + 3a)</span>
 
-<pre><code>for(int it = 0; i &lt; secret.length(); i++){
-    if(secret.substring(i).indexOf(guess) == 0){
-        count++;
-    }
-}
-return result * guess.length() * guess.length();
-</code></pre>
-<p>}</p>
-<p>3a)</p>
-<p>public void addMembers(String[] names, int gradYear){
-    for(int i = 0; i &lt; names.length; i++) {
-        MemberInfo temp = new MemberInfo(names[i],
-        gradYear, true);
-        membersLIst.add(Temp);
-    }&gt;)
-}</p>
+<span class="c1">//1a) </span>
+
+<span class="kd">public</span> <span class="kt">int</span> <span class="nf">scoreGuess</span><span class="p">(</span><span class="n">String</span> <span class="n">guess</span><span class="p">){</span>
+    <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">secret</span><span class="p">.</span><span class="na">length</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">secret</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">indexOf</span><span class="p">(</span><span class="n">guess</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+            <span class="n">count</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">result</span> <span class="o">*</span> <span class="n">guess</span><span class="p">.</span><span class="na">length</span><span class="p">()</span> <span class="o">*</span> <span class="n">guess</span><span class="p">.</span><span class="na">length</span><span class="p">();</span>
+<span class="p">}</span>
+
+
+<span class="c1">//3a) </span>
+
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">addMembers</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">names</span><span class="p">,</span> <span class="kt">int</span> <span class="n">gradYear</span><span class="p">){</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">names</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">MemberInfo</span> <span class="n">temp</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MemberInfo</span><span class="p">(</span><span class="n">names</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">,</span>
+        <span class="n">gradYear</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+        <span class="n">membersLIst</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">Temp</span><span class="p">);</span>
+    <span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
 
 </div>
-</div>
-</div>
+    
+
 </div>
 
 
