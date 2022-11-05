@@ -142,6 +142,7 @@ window.onload = wrap_img;
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ArrayMethods</span> <span class="p">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
+        <span class="c1">//////////////////////Hack #1///////////////////////////////////</span>
         <span class="kt">int</span><span class="o">[]</span> <span class="n">array_nums</span> <span class="o">=</span> <span class="p">{</span><span class="mi">60</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">135</span><span class="p">};</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Original Array: "</span><span class="o">+</span><span class="n">Arrays</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">array_nums</span><span class="p">));</span> 
         <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">array_nums</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span>
@@ -151,13 +152,17 @@ window.onload = wrap_img;
 
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"--------------------------------------"</span><span class="p">);</span>
 
+        <span class="c1">//////////////////////Hack #2///////////////////////////////////</span>
         <span class="kt">int</span> <span class="n">len</span> <span class="o">=</span> <span class="n">array_nums</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
         <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">len</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
             <span class="k">if</span><span class="p">(</span><span class="n">array_nums</span><span class="o">[</span><span class="n">i</span><span class="o">]%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span>
                 <span class="n">array_nums</span><span class="o">[</span><span class="n">i</span><span class="o">]=</span><span class="mi">0</span><span class="p">;</span>
             <span class="p">}</span>
         <span class="p">}</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"New array: "</span><span class="o">+</span><span class="n">Arrays</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">array_nums</span><span class="p">));</span>  
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"New array: "</span><span class="o">+</span><span class="n">Arrays</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">array_nums</span><span class="p">));</span> 
+        
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"--------------------------------------"</span><span class="p">);</span>
+        <span class="c1">//////////////////////Hack #3///////////////////////////////////</span>
  <span class="p">}</span>
 <span class="p">}</span>
 <span class="n">ArrayMethods</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
