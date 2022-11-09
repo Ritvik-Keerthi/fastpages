@@ -156,9 +156,13 @@ window.onload = wrap_img;
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ArrayMethods</span> <span class="p">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
         <span class="c1">//////////////////////Hack #1///////////////////////////////////</span>
+        <span class="c1">//Create array//</span>
         <span class="kt">int</span><span class="o">[]</span> <span class="n">array_nums</span> <span class="o">=</span> <span class="p">{</span><span class="mi">60</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">135</span><span class="p">};</span>
+        <span class="c1">//Convert array to string</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Original Array: "</span><span class="o">+</span><span class="n">Arrays</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">array_nums</span><span class="p">));</span> 
+        <span class="c1">//Store index 0 into variable x</span>
         <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="n">array_nums</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span>
+        <span class="c1">//Swap digits</span>
         <span class="n">array_nums</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="o">=</span> <span class="n">array_nums</span><span class="o">[</span><span class="n">array_nums</span><span class="p">.</span><span class="na">length</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span><span class="p">;</span>
         <span class="n">array_nums</span><span class="o">[</span><span class="n">array_nums</span><span class="p">.</span><span class="na">length</span><span class="o">-</span><span class="mi">1</span><span class="o">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">;</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"New array: "</span><span class="o">+</span><span class="n">Arrays</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">array_nums</span><span class="p">));</span>  
@@ -166,6 +170,7 @@ window.onload = wrap_img;
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"--------------------------------------"</span><span class="p">);</span>
 
         <span class="c1">//////////////////////Hack #2///////////////////////////////////</span>
+        <span class="c1">//Store length as variable len</span>
         <span class="kt">int</span> <span class="n">len</span> <span class="o">=</span> <span class="n">array_nums</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
         <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">len</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
             <span class="k">if</span><span class="p">(</span><span class="n">array_nums</span><span class="o">[</span><span class="n">i</span><span class="o">]%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span>
@@ -176,6 +181,7 @@ window.onload = wrap_img;
         
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"--------------------------------------"</span><span class="p">);</span>
 
+        <span class="c1">//Create for loop to check for duplicates</span>
         <span class="c1">//////////////////////Hack #4///////////////////////////////////</span>
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
             <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
@@ -189,18 +195,18 @@ window.onload = wrap_img;
 
     <span class="p">}</span>
  <span class="p">}</span>
-
+ <span class="c1">//create public class Main</span>
  <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span>
  <span class="p">{</span>
      <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">isSorted</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span> <span class="n">a</span><span class="p">)</span>
-     <span class="p">{</span>
+     <span class="p">{</span>  
          <span class="c1">// base case</span>
          <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"--------------------------------------"</span><span class="p">);</span>
          <span class="c1">//////////////////////Hack #3///////////////////////////////////</span>
          <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="n">a</span><span class="p">.</span><span class="na">length</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
             <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
          <span class="p">}</span>
-  
+         <span class="c1">//use for loop to check for length</span>
          <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">a</span><span class="p">.</span><span class="na">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
          <span class="p">{</span>
              <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">&gt;</span> <span class="n">a</span><span class="o">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span>
@@ -217,7 +223,7 @@ window.onload = wrap_img;
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">isSorted</span><span class="p">(</span><span class="n">a</span><span class="p">));</span>   
      <span class="p">}</span>
  <span class="p">}</span>
-
+<span class="c1">//call both methods</span>
 <span class="n">ArrayMethods</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 <span class="n">Main</span><span class="p">.</span><span class="na">isSorted</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
