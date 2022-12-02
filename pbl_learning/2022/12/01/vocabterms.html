@@ -504,6 +504,7 @@ Hello5
 <span class="c1">// Covers this keyword</span>
 <span class="c1">// Covers super keyword</span>
 <span class="c1">// Covers standards methods: toString(), equals(), hashCode()</span>
+<span class="c1">// Covers late binding of object</span>
 
 <span class="kd">class</span> <span class="nc">yool</span> <span class="p">{</span>
     <span class="kd">protected</span> <span class="kt">boolean</span> <span class="nf">asdff</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
@@ -535,6 +536,49 @@ Hello5
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[]</span><span class="p">)</span> <span class="p">{</span>
       <span class="n">Animal</span> <span class="n">myDog</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Dog</span><span class="p">();</span> <span class="c1">// Create a Dog object</span>
       <span class="n">myDog</span><span class="p">.</span><span class="na">animalSound</span><span class="p">();</span> <span class="c1">// Call the method on the Dog object</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// Code Snippet #6</span>
+<span class="c1">// Covers method overloading</span>
+<span class="c1">// Covers method overriding</span>
+<span class="c1">// Covers abstract class</span>
+
+<span class="kd">static</span> <span class="kt">int</span> <span class="nf">plusMethod</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">;</span>
+  <span class="p">}</span>
+  
+  <span class="kd">static</span> <span class="kt">double</span> <span class="nf">plusMethod</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">;</span>
+  <span class="p">}</span>
+  
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">myNum1</span> <span class="o">=</span> <span class="n">plusMethod</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+    <span class="kt">double</span> <span class="n">myNum2</span> <span class="o">=</span> <span class="n">plusMethod</span><span class="p">(</span><span class="mf">4.3</span><span class="p">,</span> <span class="mf">6.26</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"int: "</span> <span class="o">+</span> <span class="n">myNum1</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"double: "</span> <span class="o">+</span> <span class="n">myNum2</span><span class="p">);</span>
+  <span class="p">}</span>
+
+
+  <span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">Animal</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">abstract</span> <span class="kt">void</span> <span class="nf">animalSound</span><span class="p">();</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">sleep</span><span class="p">()</span> <span class="p">{</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Zzz"</span><span class="p">);</span>
     <span class="p">}</span>
   <span class="p">}</span>
 </pre></div>
