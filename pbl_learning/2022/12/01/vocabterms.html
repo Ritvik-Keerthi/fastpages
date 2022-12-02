@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      6 min read
     
 </span></p>
 
@@ -492,6 +492,60 @@ Hello5
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// Code Snippet #5</span>
+<span class="c1">// Covers protected access modifier</span>
+<span class="c1">// Covers this keyword</span>
+<span class="c1">// Covers super keyword</span>
+<span class="c1">// Covers standards methods: toString(), equals(), hashCode()</span>
+
+<span class="kd">class</span> <span class="nc">yool</span> <span class="p">{</span>
+    <span class="kd">protected</span> <span class="kt">boolean</span> <span class="nf">asdff</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">a</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="mi">12</span><span class="p">))</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">b</span><span class="p">.</span><span class="na">hashCode</span><span class="p">();</span>
+            <span class="n">b</span><span class="p">.</span><span class="na">toString</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+ <span class="p">}</span>
+
+ <span class="kd">class</span> <span class="nc">Animal</span> <span class="p">{</span> <span class="c1">// Superclass (parent)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">animalSound</span><span class="p">()</span> <span class="p">{</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The animal makes a sound"</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  
+  <span class="kd">class</span> <span class="nc">Dog</span> <span class="kd">extends</span> <span class="n">Animal</span> <span class="p">{</span> <span class="c1">// Subclass (child)</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">animalSound</span><span class="p">()</span> <span class="p">{</span>
+      <span class="kd">super</span><span class="p">.</span><span class="na">animalSound</span><span class="p">();</span> <span class="c1">// Call the superclass method</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"The dog says: bow wow"</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  
+  <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[]</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">Animal</span> <span class="n">myDog</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Dog</span><span class="p">();</span> <span class="c1">// Create a Dog object</span>
+      <span class="n">myDog</span><span class="p">.</span><span class="na">animalSound</span><span class="p">();</span> <span class="c1">// Call the method on the Dog object</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
