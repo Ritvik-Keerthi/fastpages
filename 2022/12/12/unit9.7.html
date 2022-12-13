@@ -133,6 +133,16 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="c1">// Demonstration of toString method</span>
+<span class="c1">// Utilized toString methods in all FRQs so far, here&#39;s an example from FRQ1</span>
+<span class="kd">public</span> <span class="n">String</span> <span class="nf">dayOfWeekToString</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span><span class="s">&quot;{ \&quot;month\&quot;: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">month</span> <span class="o">+</span> <span class="s">&quot;, &quot;</span> <span class="o">+</span> <span class="s">&quot;\&quot;day\&quot;: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">day</span> <span class="o">+</span> <span class="s">&quot;, &quot;</span> <span class="o">+</span> <span class="s">&quot;\&quot;year\&quot;: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">year</span> <span class="o">+</span> <span class="s">&quot;, &quot;</span>
+          <span class="o">+</span> <span class="s">&quot;\&quot;dayOfWeek\&quot;: &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">dayOfWeek</span> <span class="o">+</span> <span class="s">&quot; }&quot;</span><span class="p">);</span>
+ <span class="p">}</span>
+
+
+<span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">dayOfWeekToString</span><span class="p">();</span>
+ <span class="p">}</span>
 </pre></div>
 
     </div>
