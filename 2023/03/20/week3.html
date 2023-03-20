@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      9 min read
+      10 min read
     
 </span></p>
 
@@ -906,10 +906,69 @@ FIFO - First in first out.
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="c1">// Using object toString override example</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GFG</span> <span class="p">{</span>
+     
+    <span class="c1">// Main driver method</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+         
+        <span class="c1">// Creating object of class1</span>
+        <span class="c1">// inside main() method</span>
+        <span class="n">Complex</span> <span class="n">c1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Complex</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">);</span>
+         
+        <span class="c1">// Printing the complex number</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">c1</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="c1">// Class 2</span>
+<span class="c1">// Helper class</span>
+<span class="kd">class</span> <span class="nc">Complex</span> <span class="p">{</span>
+     
+    <span class="c1">// Attributes of a complex number</span>
+    <span class="kd">private</span> <span class="kt">double</span> <span class="n">re</span><span class="p">,</span> <span class="n">im</span><span class="p">;</span>
+     
+
+    <span class="kd">public</span> <span class="nf">Complex</span><span class="p">(</span><span class="kt">double</span> <span class="n">re</span><span class="p">,</span> <span class="kt">double</span> <span class="n">im</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">re</span> <span class="o">=</span> <span class="n">re</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">im</span> <span class="o">=</span> <span class="n">im</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getReal</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">re</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getImaginary</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">im</span> <span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setReal</span><span class="p">(</span><span class="kt">double</span> <span class="n">re</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">re</span> <span class="o">=</span> <span class="n">re</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setImaginary</span><span class="p">(</span><span class="kt">double</span> <span class="n">im</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">im</span> <span class="o">=</span> <span class="n">im</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="c1">// Overriding toString() method of String class</span>
+    <span class="nd">@Override</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">re</span> <span class="o">+</span> <span class="s">&quot; + &quot;</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="na">im</span> <span class="o">+</span> <span class="s">&quot;i&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">Complex.main</span><span class="ansi-black-intense-fg ansi-bold">(null);</span>
+<span class="ansi-red-intense-fg ansi-bold">cannot find symbol</span>
+<span class="ansi-red-intense-fg ansi-bold">  symbol:   method main(&lt;nulltype&gt;)</span>
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
