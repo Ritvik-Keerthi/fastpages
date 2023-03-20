@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      10 min read
+      11 min read
     
 </span></p>
 
@@ -125,6 +125,78 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// Code that shows Data Structures, Data, Inheritance, Usage of Interfaces, and Overriding of Object toString</span>
+
+<span class="c1">// Define a class called Course with name, instructor, and level properties</span>
+<span class="kd">class</span> <span class="nc">Course</span> <span class="p">{</span>
+    <span class="n">constructor</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">instructor</span><span class="p">,</span> <span class="n">level</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+      <span class="k">this</span><span class="p">.</span><span class="na">instructor</span> <span class="o">=</span> <span class="n">instructor</span><span class="p">;</span>
+      <span class="k">this</span><span class="p">.</span><span class="na">level</span> <span class="o">=</span> <span class="n">level</span><span class="p">;</span>
+    <span class="p">}</span>
+  
+    <span class="c1">// Override the toString method to return a string representation of the Course object</span>
+    <span class="n">toString</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="err">`</span><span class="n">Course</span><span class="o">[</span><span class="n">name</span><span class="o">=</span><span class="n">$</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="p">},</span> <span class="n">instructor</span><span class="o">=</span><span class="n">$</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="na">instructor</span><span class="p">},</span> <span class="n">level</span><span class="o">=</span><span class="n">$</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="na">level</span><span class="p">}</span><span class="o">]</span><span class="err">`</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  
+  <span class="c1">// Define an interface called Lesson with a method called learn</span>
+  <span class="kd">class</span> <span class="nc">Lesson</span> <span class="p">{</span>
+    <span class="n">learn</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">throw</span> <span class="k">new</span> <span class="n">Error</span><span class="p">(</span><span class="err">&#39;</span><span class="n">Method</span> <span class="nf">learn</span><span class="p">()</span> <span class="n">must</span> <span class="n">be</span> <span class="n">implemented</span><span class="err">&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  
+  <span class="c1">// Define a class called CodingLesson that inherits from Lesson and has language and editor properties</span>
+  <span class="kd">class</span> <span class="nc">CodingLesson</span> <span class="kd">extends</span> <span class="n">Lesson</span> <span class="p">{</span>
+    <span class="n">constructor</span><span class="p">(</span><span class="n">language</span><span class="p">,</span> <span class="n">editor</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">super</span><span class="p">();</span>
+      <span class="k">this</span><span class="p">.</span><span class="na">language</span> <span class="o">=</span> <span class="n">language</span><span class="p">;</span>
+      <span class="k">this</span><span class="p">.</span><span class="na">editor</span> <span class="o">=</span> <span class="n">editor</span><span class="p">;</span>
+    <span class="p">}</span>
+  
+    <span class="c1">// Implement the learn method for the CodingLesson class</span>
+    <span class="n">learn</span><span class="p">()</span> <span class="p">{</span>
+      <span class="n">console</span><span class="p">.</span><span class="na">log</span><span class="p">(</span><span class="err">`</span><span class="n">Learning</span> <span class="n">$</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="na">language</span><span class="p">}</span> <span class="n">programming</span> <span class="n">using</span> <span class="n">$</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="na">editor</span><span class="p">}</span> <span class="n">editor</span><span class="err">`</span><span class="p">);</span>
+    <span class="p">}</span>
+  
+    <span class="c1">// Override the toString method to return a string representation of the CodingLesson object</span>
+    <span class="n">toString</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="err">`</span><span class="n">CodingLesson</span><span class="o">[</span><span class="n">language</span><span class="o">=</span><span class="n">$</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="na">language</span><span class="p">},</span> <span class="n">editor</span><span class="o">=</span><span class="n">$</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="na">editor</span><span class="p">}</span><span class="o">]</span><span class="err">`</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  
+  <span class="c1">// Define a data structure that uses the Course and CodingLesson classes</span>
+  <span class="kd">const</span> <span class="n">webDevelopmentCourse</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Course</span><span class="p">(</span><span class="err">&#39;</span><span class="n">Web</span> <span class="n">Development</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">John</span> <span class="n">Doe</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">Intermediate</span><span class="err">&#39;</span><span class="p">);</span>
+  <span class="kd">const</span> <span class="n">htmlLesson</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CodingLesson</span><span class="p">(</span><span class="err">&#39;</span><span class="n">HTML</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">VS</span> <span class="n">Code</span><span class="err">&#39;</span><span class="p">);</span>
+  <span class="kd">const</span> <span class="n">cssLesson</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CodingLesson</span><span class="p">(</span><span class="err">&#39;</span><span class="n">CSS</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">Atom</span><span class="err">&#39;</span><span class="p">);</span>
+  <span class="kd">const</span> <span class="n">jsLesson</span> <span class="o">=</span> <span class="k">new</span> <span class="n">CodingLesson</span><span class="p">(</span><span class="err">&#39;</span><span class="n">JavaScript</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">Sublime</span> <span class="n">Text</span><span class="err">&#39;</span><span class="p">);</span>
+  
+  <span class="kd">const</span> <span class="n">lessons</span> <span class="o">=</span> <span class="o">[</span><span class="n">htmlLesson</span><span class="p">,</span> <span class="n">cssLesson</span><span class="p">,</span> <span class="n">jsLesson</span><span class="o">]</span><span class="p">;</span>
+  
+  <span class="n">console</span><span class="p">.</span><span class="na">log</span><span class="p">(</span><span class="err">`</span><span class="n">Welcome</span> <span class="n">to</span> <span class="n">$</span><span class="p">{</span><span class="n">webDevelopmentCourse</span><span class="p">.</span><span class="na">name</span><span class="p">}</span> <span class="n">course</span> <span class="n">taught</span> <span class="n">by</span> <span class="n">$</span><span class="p">{</span><span class="n">webDevelopmentCourse</span><span class="p">.</span><span class="na">instructor</span><span class="p">}</span> <span class="n">at</span> <span class="n">$</span><span class="p">{</span><span class="n">webDevelopmentCourse</span><span class="p">.</span><span class="na">level</span><span class="p">}</span> <span class="n">level</span><span class="err">`</span><span class="p">);</span>
+  
+  <span class="n">lessons</span><span class="p">.</span><span class="na">forEach</span><span class="p">((</span><span class="n">lesson</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="n">console</span><span class="p">.</span><span class="na">log</span><span class="p">(</span><span class="err">`</span><span class="n">Lesson</span><span class="p">:</span> <span class="n">$</span><span class="p">{</span><span class="n">lesson</span><span class="p">}</span><span class="err">`</span><span class="p">);</span>
+    <span class="n">lesson</span><span class="p">.</span><span class="na">learn</span><span class="p">();</span>
+  <span class="p">});</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
     
     
 <div class="cell border-box-sizing code_cell rendered">
