@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      2 min read
+      5 min read
     
 </span></p>
 
@@ -125,6 +125,123 @@ window.onload = wrap_img;
 
 <div class="container" id="notebook-container">
         
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Notes-To-Look-Back-On">Notes To Look Back On<a class="anchor-link" href="#Notes-To-Look-Back-On"> </a></h1><p>Access Modifiers:
+Access modifiers determine the level of access that other classes or code have to the variables and methods within a class. There are four access modifiers in Java:</p>
+<p>Public: variables or methods marked as public can be accessed from any class or package.
+Private: variables or methods marked as private can only be accessed within the same class.
+Protected: variables or methods marked as protected can only be accessed within the same class or a subclass.
+Default: variables or methods without an explicit access modifier can only be accessed within the same package.
+Constructor:
+A constructor is a special method that is called when an object of a class is created. It initializes the instance variables of the class and sets up the object. The constructor has the same name as the class and doesn't have a return type. A class can have multiple constructors with different parameters.</p>
+<p>Modifiers/Setters:
+Modifiers or setters are methods that allow us to modify the values of instance variables. They provide a way to change the state of an object after it has been created. Modifiers or setters are typically named with the prefix "set" followed by the name of the variable they modify.</p>
+<p>Getters:
+Getters are methods that allow us to access the values of instance variables from outside the class. They provide a way to retrieve the state of an object. Getters are typically named with the prefix "get" followed by the name of the variable they retrieve.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// Example Code for Stacks etc\</span>
+<span class="kn">import</span> <span class="nn">java.util.LinkedList</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Queue</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.util.Stack</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">LinkedListQueueStack</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Creating a linked list</span>
+        <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">linkedList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+        <span class="c1">// Adding elements to the linked list</span>
+        <span class="n">linkedList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Ritvik&quot;</span><span class="p">);</span>
+        <span class="n">linkedList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Aryan&quot;</span><span class="p">);</span>
+        <span class="n">linkedList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Pranav&quot;</span><span class="p">);</span>
+        <span class="n">linkedList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Jay&quot;</span><span class="p">);</span>
+
+        <span class="c1">// Printing the linked list</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Linked List:&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">linkedList</span><span class="p">);</span>
+
+        <span class="c1">// Creating a queue using linked list</span>
+        <span class="n">Queue</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">queue</span> <span class="o">=</span> <span class="k">new</span> <span class="n">LinkedList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+        <span class="c1">// Adding elements to the queue</span>
+        <span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Ritvik&quot;</span><span class="p">);</span>
+        <span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Aryan&quot;</span><span class="p">);</span>
+        <span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Pranav&quot;</span><span class="p">);</span>
+        <span class="n">queue</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;Jay&quot;</span><span class="p">);</span>
+
+        <span class="c1">// Printing the queue</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Queue:&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">queue</span><span class="p">);</span>
+
+        <span class="c1">// Removing elements from the queue</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Removing an element from the queue: &quot;</span> <span class="o">+</span> <span class="n">queue</span><span class="p">.</span><span class="na">remove</span><span class="p">());</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Queue after removing an element:&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">queue</span><span class="p">);</span>
+
+        <span class="c1">// Creating a stack using linked list</span>
+        <span class="n">Stack</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">stack</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Stack</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+        <span class="c1">// Adding elements to the stack</span>
+        <span class="n">stack</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="s">&quot;Ritvik&quot;</span><span class="p">);</span>
+        <span class="n">stack</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="s">&quot;Aryan&quot;</span><span class="p">);</span>
+        <span class="n">stack</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="s">&quot;Pranav&quot;</span><span class="p">);</span>
+        <span class="n">stack</span><span class="p">.</span><span class="na">push</span><span class="p">(</span><span class="s">&quot;Jay&quot;</span><span class="p">);</span>
+
+        <span class="c1">// Printing the stack</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Stack:&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">stack</span><span class="p">);</span>
+
+        <span class="c1">// Removing elements from the stack</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Popping an element from the stack: &quot;</span> <span class="o">+</span> <span class="n">stack</span><span class="p">.</span><span class="na">pop</span><span class="p">());</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Stack after popping an element:&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">stack</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">LinkedListQueueStack</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Linked List:
+[Alice, Bob, Charlie, Dave]
+Queue:
+[Ritvik, Aryan, Pranav, Jay]
+Removing an element from the queue: Ritvik
+Queue after removing an element:
+[Aryan, Pranav, Jay]
+Stack:
+[Ritvik, Aryan, Pranav, Jay]
+Popping an element from the stack: Jay
+Stack after popping an element:
+[Ritvik, Aryan, Pranav]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -313,6 +430,20 @@ Words count: 0, data:
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[1, 2, 3, 4, 5, 6, 7, 8]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
