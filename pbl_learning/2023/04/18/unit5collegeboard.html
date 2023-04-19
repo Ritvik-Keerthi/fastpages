@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      5 min read
     
 </span></p>
 
@@ -137,7 +137,8 @@ window.onload = wrap_img;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Anatomy of a class</p>
-<p>In Java, a class is a blueprint or a template for creating objects that have similar attributes and behaviors. Every Java class has a specific structure or anatomy that includes various components. In this lesson, we'll explore the anatomy of a class in Java and understand the significance of each component.</p>
+<p>classes and objects have the same relation as blueprints to a house</p>
+<p>In Java, a class is a blueprint or a template for creating objects which has different  attributes and behaviors. Every Java class has a specific structure or anatomy that includes various components.</p>
 <p>Here are the different components of a Java class:</p>
 <p>Class declaration: Every Java class begins with the declaration of the class name, which should be unique within the package. The syntax for declaring a class is as follows:</p>
 
@@ -151,8 +152,8 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">public</span> <span class="k">class</span> <span class="nc">ClassName</span> <span class="p">{</span>
-    <span class="o">//</span> <span class="n">Class</span> <span class="n">body</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ClassName</span> <span class="p">{</span>
+    <span class="c1">// Class body</span>
 <span class="p">}</span>
 </pre></div>
 
@@ -167,7 +168,7 @@ window.onload = wrap_img;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Class body: The class body is enclosed in braces {} and contains various components that define the behavior and attributes of the class. The class body consists of the following components:</p>
-<p>a. Fields or Instance Variables: Fields are variables that store the state or data of the object. They can be initialized at the time of declaration or in the constructor. Fields can be of any primitive(int) or reference type(Strings) :</p>
+<p>a. Fields or Instance Variables: Fields are variables that store the state or data of the object, this was covered in unit 2. They can be initialized at the time of declaration or in the constructor. Fields can be of any primitive(int) or reference type(Strings). They are a essential component of a class</p>
 
 </div>
 </div>
@@ -179,10 +180,10 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">public</span> <span class="k">class</span> <span class="nc">Person</span> <span class="p">{</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span> <span class="p">{</span>
     <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
-    <span class="nb">int</span> <span class="n">age</span><span class="p">;</span>
-    <span class="n">double</span> <span class="n">height</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">age</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">height</span><span class="p">;</span>
     <span class="n">String</span> <span class="n">Race</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
@@ -209,12 +210,12 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">public</span> <span class="k">class</span> <span class="nc">Calculator</span> <span class="p">{</span>
-    <span class="n">public</span> <span class="nb">int</span> <span class="n">add</span><span class="p">(</span><span class="nb">int</span> <span class="n">a</span><span class="p">,</span> <span class="nb">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Calculator</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">add</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
     <span class="p">}</span>
     
-    <span class="n">public</span> <span class="n">double</span> <span class="n">add</span><span class="p">(</span><span class="n">double</span> <span class="n">a</span><span class="p">,</span> <span class="n">double</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">add</span><span class="p">(</span><span class="kt">double</span> <span class="n">a</span><span class="p">,</span> <span class="kt">double</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -243,13 +244,13 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">public</span> <span class="k">class</span> <span class="nc">Person</span> <span class="p">{</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Person</span> <span class="p">{</span>
     <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
-    <span class="nb">int</span> <span class="n">age</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">age</span><span class="p">;</span>
     
-    <span class="n">public</span> <span class="n">Person</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="nb">int</span> <span class="n">age</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">this</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
-        <span class="n">this</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="nf">Person</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">age</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">age</span> <span class="o">=</span> <span class="n">age</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -261,6 +262,60 @@ window.onload = wrap_img;
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Not it is important to understand that any field variables, methods, or constructers listed as public is accesible outside the class whereas when it is listed private it is only accesible within the class</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MyClass</span> <span class="p">{</span>
+    <span class="c1">// This variable can be accessed from anywhere.</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="n">publicVar</span><span class="p">;</span>
+
+    <span class="c1">// This variable can only be accessed from within this class.</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">privateVar</span><span class="p">;</span>
+
+    <span class="c1">// This method can be accessed from anywhere.</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">publicMethod</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"This is a public method."</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">// This method can only be accessed from within this class.</span>
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">privateMethod</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"This is a private method."</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>-Now generally classes are always made public because it needs to be used</p>
+<p>-fields are usually private so that it cannot be tampared with outside the class,</p>
+<ul>
+<li>most methods are going to be public but there will be scenarios where you want to make it private, </li>
+</ul>
+<p>-Constructers need to be public because when creating an object you need to make it public</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -276,29 +331,29 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">public</span> <span class="k">class</span> <span class="nc">Animal</span> <span class="p">{</span>
-    <span class="n">private</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Animal</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="p">;</span>
 
-    <span class="n">public</span> <span class="n">Animal</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">this</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
+    <span class="kd">public</span> <span class="nf">Animal</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">name</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
     <span class="p">}</span>
 
-    <span class="n">public</span> <span class="n">String</span> <span class="n">getName</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="p">()</span> <span class="p">{</span>
         <span class="k">return</span> <span class="n">name</span><span class="p">;</span>
     <span class="p">}</span>
 
-    <span class="n">public</span> <span class="n">void</span> <span class="n">speak</span><span class="p">()</span> <span class="p">{</span>
-        <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">"I am an animal."</span><span class="p">);</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">speak</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"I am an animal."</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="n">public</span> <span class="k">class</span> <span class="nc">Dog</span> <span class="n">extends</span> <span class="n">Animal</span> <span class="p">{</span>
-    <span class="n">public</span> <span class="n">Dog</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nb">super</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Dog</span> <span class="kd">extends</span> <span class="n">Animal</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="nf">Dog</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">name</span><span class="p">);</span>
     <span class="p">}</span>
 
-    <span class="n">public</span> <span class="n">void</span> <span class="n">bark</span><span class="p">()</span> <span class="p">{</span>
-        <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">"Woof!"</span><span class="p">);</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">bark</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Woof!"</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -333,21 +388,21 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="n">public</span> <span class="k">class</span> <span class="nc">Animal</span> <span class="p">{</span>
-    <span class="n">public</span> <span class="n">void</span> <span class="n">speak</span><span class="p">()</span> <span class="p">{</span>
-        <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">"I am an animal."</span><span class="p">);</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Animal</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">speak</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"I am an animal."</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="n">public</span> <span class="k">class</span> <span class="nc">Dog</span> <span class="n">extends</span> <span class="n">Animal</span> <span class="p">{</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Dog</span> <span class="kd">extends</span> <span class="n">Animal</span> <span class="p">{</span>
     <span class="nd">@Override</span>
-    <span class="n">public</span> <span class="n">void</span> <span class="n">speak</span><span class="p">()</span> <span class="p">{</span>
-        <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">"Woof!"</span><span class="p">);</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">speak</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Woof!"</span><span class="p">);</span>
     <span class="p">}</span>
 
-    <span class="n">public</span> <span class="n">void</span> <span class="n">speak</span><span class="p">(</span><span class="nb">int</span> <span class="n">times</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">for</span> <span class="p">(</span><span class="nb">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">times</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">System</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">println</span><span class="p">(</span><span class="s2">"Woof!"</span><span class="p">);</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">speak</span><span class="p">(</span><span class="kt">int</span> <span class="n">times</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">times</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Woof!"</span><span class="p">);</span>
         <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
