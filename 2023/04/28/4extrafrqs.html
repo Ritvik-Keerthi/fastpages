@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      4 min read
     
 </span></p>
 
@@ -135,46 +135,46 @@ window.onload = wrap_img;
 <div class=" highlight hl-java"><pre><span></span><span class="c1">// 2020 Practice FRQ #1</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Hailstone</span> <span class="p">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">hailstoneLength</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>  <span class="c1">// start with n</span>
-        <span class="k">while</span> <span class="p">(</span><span class="n">n</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-                <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
-            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-                <span class="n">n</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
-            <span class="p">}</span>
-            <span class="n">length</span><span class="o">++</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>  <span class="c1">// start with n</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">n</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">n</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
         <span class="p">}</span>
-        <span class="k">return</span> <span class="n">length</span><span class="p">;</span>
+        <span class="n">length</span><span class="o">++</span><span class="p">;</span>
     <span class="p">}</span>
-    
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">isLongSeq</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="n">hailstoneLength</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
-        <span class="k">return</span> <span class="n">length</span> <span class="o">&gt;</span> <span class="n">n</span><span class="p">;</span>
-    <span class="p">}</span>
-    
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">double</span> <span class="nf">propLong</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">isLongSeq</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="p">{</span>
-                <span class="n">count</span><span class="o">++</span><span class="p">;</span>
-            <span class="p">}</span>
+    <span class="k">return</span> <span class="n">length</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">isLongSeq</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="n">hailstoneLength</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">length</span> <span class="o">&gt;</span> <span class="n">n</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">double</span> <span class="nf">propLong</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">isLongSeq</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="p">{</span>
+            <span class="n">count</span><span class="o">++</span><span class="p">;</span>
         <span class="p">}</span>
-        <span class="k">return</span> <span class="p">(</span><span class="kt">double</span><span class="p">)</span> <span class="n">count</span> <span class="o">/</span> <span class="n">n</span><span class="p">;</span>
     <span class="p">}</span>
+    <span class="k">return</span> <span class="p">(</span><span class="kt">double</span><span class="p">)</span> <span class="n">count</span> <span class="o">/</span> <span class="n">n</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Test hailstoneLength method</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;hailstoneLength(5): &quot;</span> <span class="o">+</span> <span class="n">Hailstone</span><span class="p">.</span><span class="na">hailstoneLength</span><span class="p">(</span><span class="mi">5</span><span class="p">));</span> <span class="c1">// expected output: 6</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;hailstoneLength(8): &quot;</span> <span class="o">+</span> <span class="n">Hailstone</span><span class="p">.</span><span class="na">hailstoneLength</span><span class="p">(</span><span class="mi">8</span><span class="p">));</span> <span class="c1">// expected output: 4</span>
     
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="c1">// Test hailstoneLength method</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;hailstoneLength(5): &quot;</span> <span class="o">+</span> <span class="n">Hailstone</span><span class="p">.</span><span class="na">hailstoneLength</span><span class="p">(</span><span class="mi">5</span><span class="p">));</span> <span class="c1">// expected output: 6</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;hailstoneLength(8): &quot;</span> <span class="o">+</span> <span class="n">Hailstone</span><span class="p">.</span><span class="na">hailstoneLength</span><span class="p">(</span><span class="mi">8</span><span class="p">));</span> <span class="c1">// expected output: 4</span>
-        
-        <span class="c1">// Test isLongSeq method</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;isLongSeq(5): &quot;</span> <span class="o">+</span> <span class="n">Hailstone</span><span class="p">.</span><span class="na">isLongSeq</span><span class="p">(</span><span class="mi">5</span><span class="p">));</span> <span class="c1">// expected output: true</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;isLongSeq(8): &quot;</span> <span class="o">+</span> <span class="n">Hailstone</span><span class="p">.</span><span class="na">isLongSeq</span><span class="p">(</span><span class="mi">8</span><span class="p">));</span> <span class="c1">// expected output: false</span>
-        
-        <span class="c1">// Test propLong method</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;propLong(10): &quot;</span> <span class="o">+</span> <span class="n">Hailstone</span><span class="p">.</span><span class="na">propLong</span><span class="p">(</span><span class="mi">10</span><span class="p">));</span> <span class="c1">// expected output: 0.4</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;propLong(20): &quot;</span> <span class="o">+</span> <span class="n">Hailstone</span><span class="p">.</span><span class="na">propLong</span><span class="p">(</span><span class="mi">20</span><span class="p">));</span> <span class="c1">// expected output: 0.45</span>
-    <span class="p">}</span>
+    <span class="c1">// Test isLongSeq method</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;isLongSeq(5): &quot;</span> <span class="o">+</span> <span class="n">Hailstone</span><span class="p">.</span><span class="na">isLongSeq</span><span class="p">(</span><span class="mi">5</span><span class="p">));</span> <span class="c1">// expected output: true</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;isLongSeq(8): &quot;</span> <span class="o">+</span> <span class="n">Hailstone</span><span class="p">.</span><span class="na">isLongSeq</span><span class="p">(</span><span class="mi">8</span><span class="p">));</span> <span class="c1">// expected output: false</span>
+    
+    <span class="c1">// Test propLong method</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;propLong(10): &quot;</span> <span class="o">+</span> <span class="n">Hailstone</span><span class="p">.</span><span class="na">propLong</span><span class="p">(</span><span class="mi">10</span><span class="p">));</span> <span class="c1">// expected output: 0.4</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;propLong(20): &quot;</span> <span class="o">+</span> <span class="n">Hailstone</span><span class="p">.</span><span class="na">propLong</span><span class="p">(</span><span class="mi">20</span><span class="p">));</span> <span class="c1">// expected output: 0.45</span>
+<span class="p">}</span>
 <span class="p">}</span>
 
 
@@ -190,16 +190,13 @@ window.onload = wrap_img;
 
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">getNewRating</span><span class="ansi-black-intense-fg ansi-bold"> = 0;</span>
-<span class="ansi-red-intense-fg ansi-bold">cannot find symbol</span>
-<span class="ansi-red-intense-fg ansi-bold">  symbol:   variable getNewRating</span>
-
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    public double getNewRating() </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">{</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">        getNewRating = 0;</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">    }</span>
-<span class="ansi-red-intense-fg ansi-bold">missing return statement</span>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>hailstoneLength(5): 6
+hailstoneLength(8): 4
+isLongSeq(5): true
+isLongSeq(8): false
+propLong(10): 0.5
+propLong(20): 0.5
 </pre>
 </div>
 </div>
@@ -284,6 +281,110 @@ Current Stop 1
 Current Stop 2
 Current Stop 2
 Current Stop 1
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// 2020 FRQ #2</span>
+<span class="kn">import</span> <span class="nn">java.util.Random</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">GameSpinner</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">sectors</span><span class="p">;</span> <span class="c1">// number of sectors in the spinner</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">prevSpin</span><span class="p">;</span> <span class="c1">// value of previous spin</span>
+    <span class="kd">private</span> <span class="kt">int</span> <span class="n">currentRunLength</span><span class="p">;</span> <span class="c1">// length of current run</span>
+    <span class="kd">private</span> <span class="n">Random</span> <span class="n">rand</span><span class="p">;</span> <span class="c1">// random number generator</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * Constructs a new GameSpinner object with the specified number of sectors.</span>
+<span class="cm">     * @param sectors the number of sectors in the spinner</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="nf">GameSpinner</span><span class="p">(</span><span class="kt">int</span> <span class="n">sectors</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">sectors</span> <span class="o">=</span> <span class="n">sectors</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">prevSpin</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">currentRunLength</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">rand</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Random</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * Spins the spinner and returns the result.</span>
+<span class="cm">     * @return a random integer between 1 and the number of sectors, inclusive</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">spin</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="n">rand</span><span class="p">.</span><span class="na">nextInt</span><span class="p">(</span><span class="n">sectors</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">result</span> <span class="o">==</span> <span class="n">prevSpin</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">currentRunLength</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">currentRunLength</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">prevSpin</span> <span class="o">=</span> <span class="n">result</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/**</span>
+<span class="cm">     * Returns the length of the current run, the number of consecutive spins that are the same as the most recent spin.</span>
+<span class="cm">     * @return the length of the current run</span>
+<span class="cm">     */</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">currentRun</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">currentRunLength</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Tester main method</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">GameSpinner</span> <span class="n">g</span> <span class="o">=</span> <span class="k">new</span> <span class="n">GameSpinner</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">g</span><span class="p">.</span><span class="na">currentRun</span><span class="p">());</span> <span class="c1">// 0</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">g</span><span class="p">.</span><span class="na">spin</span><span class="p">());</span> <span class="c1">// 3</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">g</span><span class="p">.</span><span class="na">currentRun</span><span class="p">());</span> <span class="c1">// 1</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">g</span><span class="p">.</span><span class="na">spin</span><span class="p">());</span> <span class="c1">// 3</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">g</span><span class="p">.</span><span class="na">currentRun</span><span class="p">());</span> <span class="c1">// 2</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">g</span><span class="p">.</span><span class="na">spin</span><span class="p">());</span> <span class="c1">// 4</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">g</span><span class="p">.</span><span class="na">currentRun</span><span class="p">());</span> <span class="c1">// 1</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">g</span><span class="p">.</span><span class="na">spin</span><span class="p">());</span> <span class="c1">// 3</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">g</span><span class="p">.</span><span class="na">currentRun</span><span class="p">());</span> <span class="c1">// 1</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">g</span><span class="p">.</span><span class="na">spin</span><span class="p">());</span> <span class="c1">// 1</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">g</span><span class="p">.</span><span class="na">spin</span><span class="p">());</span> <span class="c1">// 1</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">g</span><span class="p">.</span><span class="na">spin</span><span class="p">());</span> <span class="c1">// 1</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">g</span><span class="p">.</span><span class="na">currentRun</span><span class="p">());</span> <span class="c1">// 3</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="n">GameSpinner</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0
+2
+1
+1
+1
+2
+1
+3
+1
+1
+4
+2
+1
 </pre>
 </div>
 </div>
