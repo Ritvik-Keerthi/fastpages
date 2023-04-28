@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      3 min read
     
 </span></p>
 
@@ -132,77 +132,53 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="c1">// FRQ 4 Methods and Control Structures</span>
-
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">RunningAverage</span> <span class="p">{</span>
-    <span class="cm">/** The number of ratings included in the running average. */</span>
-    <span class="kd">private</span> <span class="kt">int</span> <span class="n">count</span><span class="p">;</span>
-
-    <span class="cm">/** The average of the ratings that have been entered. */</span>
-    <span class="kd">private</span> <span class="kt">double</span> <span class="n">average</span><span class="p">;</span>
-
-    <span class="cm">/** Creates a RunningAverage object.</span>
-<span class="cm">     * Postcondition: count is initialized to 0 and average is</span>
-<span class="cm">     * initialized to 0.0.</span>
-<span class="cm">     */</span>
-    <span class="kd">public</span> <span class="nf">RunningAverage</span><span class="p">()</span> <span class="p">{</span>
-        <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="n">average</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="cm">/** Updates the running average to reflect the entry of a new</span>
-<span class="cm">     * rating, as described in part (a).</span>
-<span class="cm">     */</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">updateAverage</span><span class="p">(</span><span class="kt">double</span> <span class="n">newVal</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kt">double</span> <span class="n">newTotal</span> <span class="o">=</span> <span class="n">count</span> <span class="o">*</span> <span class="n">average</span> <span class="o">+</span> <span class="n">newVal</span><span class="p">;</span>
-        <span class="n">count</span><span class="o">++</span><span class="p">;</span>
-        <span class="n">average</span> <span class="o">=</span> <span class="n">newTotal</span> <span class="o">/</span> <span class="n">count</span><span class="p">;</span>
-    <span class="p">}</span>
-
-    <span class="cm">/** Returns a single numeric rating. */</span>
-    <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getNewRating</span><span class="p">()</span> <span class="p">{</span>
-        <span class="c1">// code for generating new rating goes here</span>
-    <span class="p">}</span>
-
-    <span class="cm">/** Processes num new ratings by considering them for inclusion</span>
-<span class="cm">     * in the running average and updating the running average as</span>
-<span class="cm">     * necessary. Returns an integer that represents the number of</span>
-<span class="cm">     * invalid ratings, as described in part (b).</span>
-<span class="cm">     * Precondition: num &gt; 0</span>
-<span class="cm">     */</span>
-    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">processNewRatings</span><span class="p">(</span><span class="kt">int</span> <span class="n">num</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kt">int</span> <span class="n">invalidRatings</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">num</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-            <span class="kt">double</span> <span class="n">newRating</span> <span class="o">=</span> <span class="n">getNewRating</span><span class="p">();</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">newRating</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-                <span class="n">updateAverage</span><span class="p">(</span><span class="n">newRating</span><span class="p">);</span>
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// 2020 Practice FRQ #1</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Hailstone</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">int</span> <span class="nf">hailstoneLength</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>  <span class="c1">// start with n</span>
+        <span class="k">while</span> <span class="p">(</span><span class="n">n</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
             <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-                <span class="n">invalidRatings</span><span class="o">++</span><span class="p">;</span>
+                <span class="n">n</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">length</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">length</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="nf">isLongSeq</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="n">hailstoneLength</span><span class="p">(</span><span class="n">n</span><span class="p">);</span>
+        <span class="k">return</span> <span class="n">length</span> <span class="o">&gt;</span> <span class="n">n</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">double</span> <span class="nf">propLong</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">isLongSeq</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="p">{</span>
+                <span class="n">count</span><span class="o">++</span><span class="p">;</span>
             <span class="p">}</span>
         <span class="p">}</span>
-        <span class="k">return</span> <span class="n">invalidRatings</span><span class="p">;</span>
+        <span class="k">return</span> <span class="p">(</span><span class="kt">double</span><span class="p">)</span> <span class="n">count</span> <span class="o">/</span> <span class="n">n</span><span class="p">;</span>
     <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">RunningAverageTester</span> <span class="p">{</span>
+    
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">RunningAverage</span> <span class="n">ra</span> <span class="o">=</span> <span class="k">new</span> <span class="n">RunningAverage</span><span class="p">();</span>
-
-        <span class="kt">int</span> <span class="n">invalidRatings</span> <span class="o">=</span> <span class="n">ra</span><span class="p">.</span><span class="na">processNewRatings</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Invalid ratings: &quot;</span> <span class="o">+</span> <span class="n">invalidRatings</span><span class="p">);</span> <span class="c1">// should be 0</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Current average: &quot;</span> <span class="o">+</span> <span class="n">ra</span><span class="p">.</span><span class="na">average</span><span class="p">);</span> <span class="c1">// should be (2.5 + 4.5) / 2 = 3.5</span>
-
-        <span class="n">invalidRatings</span> <span class="o">=</span> <span class="n">ra</span><span class="p">.</span><span class="na">processNewRatings</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Invalid ratings: &quot;</span> <span class="o">+</span> <span class="n">invalidRatings</span><span class="p">);</span> <span class="c1">// should be 1</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Current average: &quot;</span> <span class="o">+</span> <span class="n">ra</span><span class="p">.</span><span class="na">average</span><span class="p">);</span> <span class="c1">// should still be 3.5</span>
-
-        <span class="n">invalidRatings</span> <span class="o">=</span> <span class="n">ra</span><span class="p">.</span><span class="na">processNewRatings</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Invalid ratings: &quot;</span> <span class="o">+</span> <span class="n">invalidRatings</span><span class="p">);</span> <span class="c1">// should be 2</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Current average: &quot;</span> <span class="o">+</span> <span class="n">ra</span><span class="p">.</span><span class="na">average</span><span class="p">);</span> <span class="c1">// should be (2.5 + 4.5 + 0 + 3.5) / 4 = 2.375</span>
+        <span class="c1">// Test hailstoneLength method</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;hailstoneLength(5): &quot;</span> <span class="o">+</span> <span class="n">Hailstone</span><span class="p">.</span><span class="na">hailstoneLength</span><span class="p">(</span><span class="mi">5</span><span class="p">));</span> <span class="c1">// expected output: 6</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;hailstoneLength(8): &quot;</span> <span class="o">+</span> <span class="n">Hailstone</span><span class="p">.</span><span class="na">hailstoneLength</span><span class="p">(</span><span class="mi">8</span><span class="p">));</span> <span class="c1">// expected output: 4</span>
+        
+        <span class="c1">// Test isLongSeq method</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;isLongSeq(5): &quot;</span> <span class="o">+</span> <span class="n">Hailstone</span><span class="p">.</span><span class="na">isLongSeq</span><span class="p">(</span><span class="mi">5</span><span class="p">));</span> <span class="c1">// expected output: true</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;isLongSeq(8): &quot;</span> <span class="o">+</span> <span class="n">Hailstone</span><span class="p">.</span><span class="na">isLongSeq</span><span class="p">(</span><span class="mi">8</span><span class="p">));</span> <span class="c1">// expected output: false</span>
+        
+        <span class="c1">// Test propLong method</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;propLong(10): &quot;</span> <span class="o">+</span> <span class="n">Hailstone</span><span class="p">.</span><span class="na">propLong</span><span class="p">(</span><span class="mi">10</span><span class="p">));</span> <span class="c1">// expected output: 0.4</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;propLong(20): &quot;</span> <span class="o">+</span> <span class="n">Hailstone</span><span class="p">.</span><span class="na">propLong</span><span class="p">(</span><span class="mi">20</span><span class="p">));</span> <span class="c1">// expected output: 0.45</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="n">RunningAverageTester</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+
+<span class="n">Hailstone</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -216,8 +192,12 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_text output_error">
 <pre>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">getNewRating</span><span class="ansi-black-intense-fg ansi-bold"> = 0;</span>
+<span class="ansi-red-intense-fg ansi-bold">cannot find symbol</span>
+<span class="ansi-red-intense-fg ansi-bold">  symbol:   variable getNewRating</span>
+
 <span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    public double getNewRating() </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">{</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">        // code for generating new rating goes here</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">        getNewRating = 0;</span>
 <span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">    }</span>
 <span class="ansi-red-intense-fg ansi-bold">missing return statement</span>
 </pre>
@@ -266,21 +246,21 @@ window.onload = wrap_img;
     <span class="c1">// Tester method</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">Bus</span> <span class="n">bus1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Bus</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">bus1</span><span class="p">.</span><span class="na">getCurrentStop</span><span class="p">());</span> <span class="c1">// 1</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Current Stop &quot;</span> <span class="o">+</span> <span class="n">bus1</span><span class="p">.</span><span class="na">getCurrentStop</span><span class="p">());</span> <span class="c1">// 1</span>
         <span class="n">bus1</span><span class="p">.</span><span class="na">move</span><span class="p">();</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">bus1</span><span class="p">.</span><span class="na">getCurrentStop</span><span class="p">());</span> <span class="c1">// 2</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Current Stop &quot;</span> <span class="o">+</span> <span class="n">bus1</span><span class="p">.</span><span class="na">getCurrentStop</span><span class="p">());</span> <span class="c1">// 2</span>
         <span class="n">bus1</span><span class="p">.</span><span class="na">move</span><span class="p">();</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">bus1</span><span class="p">.</span><span class="na">getCurrentStop</span><span class="p">());</span> <span class="c1">// 3</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Current Stop &quot;</span> <span class="o">+</span> <span class="n">bus1</span><span class="p">.</span><span class="na">getCurrentStop</span><span class="p">());</span> <span class="c1">// 3</span>
         <span class="n">bus1</span><span class="p">.</span><span class="na">move</span><span class="p">();</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">bus1</span><span class="p">.</span><span class="na">getCurrentStop</span><span class="p">());</span> <span class="c1">// 2</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Current Stop &quot;</span> <span class="o">+</span> <span class="n">bus1</span><span class="p">.</span><span class="na">getCurrentStop</span><span class="p">());</span> <span class="c1">// 2</span>
         <span class="n">bus1</span><span class="p">.</span><span class="na">move</span><span class="p">();</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">bus1</span><span class="p">.</span><span class="na">getCurrentStop</span><span class="p">());</span> <span class="c1">// 1</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Current Stop &quot;</span> <span class="o">+</span> <span class="n">bus1</span><span class="p">.</span><span class="na">getCurrentStop</span><span class="p">());</span> <span class="c1">// 1</span>
         <span class="n">bus1</span><span class="p">.</span><span class="na">move</span><span class="p">();</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">bus1</span><span class="p">.</span><span class="na">getCurrentStop</span><span class="p">());</span> <span class="c1">// 2</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">bus1</span><span class="p">.</span><span class="na">getCurrentStop</span><span class="p">());</span> <span class="c1">// 2 (still at stop 2)</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Current Stop &quot;</span> <span class="o">+</span> <span class="n">bus1</span><span class="p">.</span><span class="na">getCurrentStop</span><span class="p">());</span> <span class="c1">// 2</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Current Stop &quot;</span> <span class="o">+</span> <span class="n">bus1</span><span class="p">.</span><span class="na">getCurrentStop</span><span class="p">());</span> <span class="c1">// 2 (still at stop 2)</span>
         
         <span class="n">Bus</span> <span class="n">bus2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Bus</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">bus2</span><span class="p">.</span><span class="na">getCurrentStop</span><span class="p">());</span> <span class="c1">// 1</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Current Stop &quot;</span> <span class="o">+</span> <span class="n">bus2</span><span class="p">.</span><span class="na">getCurrentStop</span><span class="p">());</span> <span class="c1">// 1</span>
     <span class="p">}</span>
 <span class="p">}</span>
 <span class="n">Bus</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
@@ -290,78 +270,24 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Current Stop 1
+Current Stop 2
+Current Stop 3
+Current Stop 2
+Current Stop 1
+Current Stop 2
+Current Stop 2
+Current Stop 1
+</pre>
 </div>
-    
+</div>
 
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="c1">// FRQ 1 Arrays, ArrayLists</span>
-
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ClubMembers</span> <span class="p">{</span>
-    <span class="kd">private</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">MemberInfo</span><span class="o">&gt;</span> <span class="n">memberList</span><span class="p">;</span>
-
-    <span class="kd">public</span> <span class="nf">ClubMembers</span><span class="p">()</span> <span class="p">{</span>
-        <span class="n">memberList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">MemberInfo</span><span class="o">&gt;</span><span class="p">();</span>
-    <span class="p">}</span>
-
-    <span class="cm">/** Adds new club members to memberList, as described in part (a).</span>
-<span class="cm">     * Precondition: names is a non-empty array.</span>
-<span class="cm">     */</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">addMembers</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">names</span><span class="p">,</span> <span class="kt">int</span> <span class="n">gradYear</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">for</span> <span class="p">(</span><span class="n">String</span> <span class="n">name</span> <span class="p">:</span> <span class="n">names</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">memberList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span> <span class="n">MemberInfo</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">gradYear</span><span class="p">,</span> <span class="kc">true</span><span class="p">));</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-
-    <span class="cm">/** Removes members who have graduated and returns a list of</span>
-<span class="cm">     * members who have graduated and are in good standing,</span>
-<span class="cm">     * as described in part (b).</span>
-<span class="cm">     */</span>
-    <span class="kd">public</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">MemberInfo</span><span class="o">&gt;</span> <span class="nf">removeMembers</span><span class="p">(</span><span class="kt">int</span> <span class="n">year</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">MemberInfo</span><span class="o">&gt;</span> <span class="n">removedMembers</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">MemberInfo</span><span class="o">&gt;</span><span class="p">();</span>
-        <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">MemberInfo</span><span class="o">&gt;</span> <span class="n">iterator</span> <span class="o">=</span> <span class="n">memberList</span><span class="p">.</span><span class="na">iterator</span><span class="p">();</span>
-        <span class="k">while</span> <span class="p">(</span><span class="n">iterator</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span> <span class="p">{</span>
-            <span class="n">MemberInfo</span> <span class="n">member</span> <span class="o">=</span> <span class="n">iterator</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">member</span><span class="p">.</span><span class="na">getGradYear</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="n">year</span> <span class="o">&amp;&amp;</span> <span class="n">member</span><span class="p">.</span><span class="na">inGoodStanding</span><span class="p">())</span> <span class="p">{</span>
-                <span class="n">removedMembers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">member</span><span class="p">);</span>
-                <span class="n">iterator</span><span class="p">.</span><span class="na">remove</span><span class="p">();</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-        <span class="k">return</span> <span class="n">removedMembers</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">ClubMembersTester</span> <span class="p">{</span>
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">ClubMembers</span> <span class="n">clubMembers</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ClubMembers</span><span class="p">();</span>
-        <span class="n">String</span><span class="o">[]</span> <span class="n">names</span> <span class="o">=</span> <span class="p">{</span><span class="s">&quot;SMITH, JANE&quot;</span><span class="p">,</span> <span class="s">&quot;FOX, STEVE&quot;</span><span class="p">,</span> <span class="s">&quot;XIN, MICHAEL&quot;</span><span class="p">,</span> <span class="s">&quot;GARCIA, MARIA&quot;</span><span class="p">};</span>
-        <span class="n">clubMembers</span><span class="p">.</span><span class="na">addMembers</span><span class="p">(</span><span class="n">names</span><span class="p">,</span> <span class="mi">2019</span><span class="p">);</span>
-        <span class="n">clubMembers</span><span class="p">.</span><span class="na">addMembers</span><span class="p">(</span><span class="k">new</span> <span class="n">String</span><span class="o">[]</span><span class="p">{</span><span class="s">&quot;WANG, JIM&quot;</span><span class="p">},</span> <span class="mi">2020</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Member list before removal:&quot;</span><span class="p">);</span>
-        <span class="k">for</span> <span class="p">(</span><span class="n">MemberInfo</span> <span class="n">member</span> <span class="p">:</span> <span class="n">clubMembers</span><span class="p">.</span><span class="na">memberList</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">member</span><span class="p">.</span><span class="na">getGradYear</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;\t&quot;</span> <span class="o">+</span> <span class="n">member</span><span class="p">.</span><span class="na">inGoodStanding</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;\t&quot;</span> <span class="o">+</span> <span class="n">member</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
-        <span class="p">}</span>
-        <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">MemberInfo</span><span class="o">&gt;</span> <span class="n">removedMembers</span> <span class="o">=</span> <span class="n">clubMembers</span><span class="p">.</span><span class="na">removeMembers</span><span class="p">(</span><span class="mi">2018</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Removed members:&quot;</span><span class="p">);</span>
-        <span class="k">for</span> <span class="p">(</span><span class="n">MemberInfo</span> <span class="n">member</span> <span class="p">:</span> <span class="n">removedMembers</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">member</span><span class="p">.</span><span class="na">getGradYear</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;\t&quot;</span> <span class="o">+</span> <span class="n">member</span><span class="p">.</span><span class="na">inGoodStanding</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;\t&quot;</span> <span class="o">+</span> <span class="n">member</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
-        <span class="p">}</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Member list after removal:&quot;</span><span class="p">);</span>
-        <span class="k">for</span> <span class="p">(</span><span class="n">MemberInfo</span> <span class="n">member</span> <span class="p">:</span> <span class="n">clubMembers</span><span class="p">.</span><span class="na">memberList</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">member</span><span class="p">.</span><span class="na">getGradYear</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;\t&quot;</span> <span class="o">+</span> <span class="n">member</span><span class="p">.</span><span class="na">inGoodStanding</span><span class="p">()</span> <span class="o">+</span> <span class="s">&quot;\t&quot;</span> <span class="o">+</span> <span class="n">member</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="n">ClubMembersTester</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
-</pre></div>
-
-    </div>
 </div>
 </div>
 
@@ -449,6 +375,25 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>5
+dogs
+toys
+sun
+plants
+time
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
